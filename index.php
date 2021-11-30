@@ -9,9 +9,7 @@
 </head>
 
 <body>
-    <?php
-    include("includes/connect.php"); 
-    ?>
+    
 </body>
 
 </html>
