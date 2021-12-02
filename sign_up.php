@@ -21,8 +21,8 @@ if (isset($_POST['signup'])) {
         } else {
             $err = "Confirm password Doesnot Match";
         }
-    }else{
-        $err="Oops! User name is already taken";
+    } else {
+        $err = "Oops! User name is already taken";
     }
 }
 ?>
@@ -71,7 +71,7 @@ if (isset($_POST['signup'])) {
                     <p class="text-center"><b>Create a account</b></p>
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="TRUE">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="User name" name="u_name" value="<?php if (isset($_POST['u_name'])) echo $_POST['u_name']; ?>"required>
+                            <input type="text" class="form-control" placeholder="User name" name="u_name" value="<?php if (isset($_POST['u_name'])) echo $_POST['u_name']; ?>" required>
                             <small class="form-text text-danger"></small>
                         </div>
                         <div class="form-group">
@@ -81,7 +81,7 @@ if (isset($_POST['signup'])) {
                             <input type="password" class="form-control" placeholder="Your password" name="u_password" value="<?php if (isset($_POST['u_password'])) echo $_POST['u_password']; ?>" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password" value="<?php if (isset($_POST['confirm_password'])) echo $_POST['confirm_password']; ?>"required>
+                            <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password" value="<?php if (isset($_POST['confirm_password'])) echo $_POST['confirm_password']; ?>" required>
                         </div>
                         <button type="submit" name="signup" class="btn btn-success d-block w-50 mx-auto">Sign Up</button>
                     </form>
