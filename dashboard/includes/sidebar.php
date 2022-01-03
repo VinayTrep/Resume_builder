@@ -13,7 +13,7 @@
       <a href="../dashboard/index.php" class="<?php if($_SERVER['REQUEST_URI'] == "/resume/dashboard/index.php"){echo "active";}else{echo "";} ?>">Personal Info</a>
     </li>
     <li>
-      <a href="../dashboard/work_expreance.php" class="<?php if($_SERVER['REQUEST_URI'] == "/resume/dashboard/work_expreance.php"){echo "active";}else{echo "";} ?>">Work Expreance</a>
+      <a href="../dashboard/work_expreance.php" class="<?php if($_SERVER['REQUEST_URI'] == "/resume/dashboard/work_expreance.php"){echo "active";}else{echo "";} ?>">Work Expereance</a>
     </li>
     <li>
       <a  href="../dashboard/education.php" class="<?php if($_SERVER['REQUEST_URI'] == "/resume/dashboard/education.php"){echo "active";}else{echo "";} ?>">Education</a>
