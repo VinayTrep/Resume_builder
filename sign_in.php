@@ -77,10 +77,10 @@ include('./includes/connect.php');
         <div class="form">
           <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <div class="form-group mt-3">
-              <input type="email" class="form-control" placeholder="Enter email" name="u_email" required>
+              <input type="email" class="form-control" placeholder="Enter email" name="u_email" value="<?php if (isset($_POST['u_email'])) echo $_POST['u_email']; ?>" required>
             </div>
             <div class="form-group mt-3">
-              <input type="password" class="form-control" placeholder="Enter password" name="u_password" required>
+              <input type="password" class="form-control" placeholder="Enter password" name="u_password" value="<?php if (isset($_POST['u_password'])) echo $_POST['u_password']; ?>" required>
             </div>
             <button name="submit" type="submit" class="btn d-block bg-success w-50 mx-auto text-white mt-4">Sign in</button>
           </form>
