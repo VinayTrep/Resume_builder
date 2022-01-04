@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Enter your description here" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="../dashboard/assets/sidebar.css">
-  <title>Project Work</title>
+  <style>
+  .text-blue{
+    background-color: #0F2027;
+  }
+  </style>
 </head>
 
 <body>
+
   <?php
-  include('../dashboard/includes/sidebar.php');
+  include("includes/sidebar.php");
   ?>
-  <div class="container-fluid">
+
+  <div class="main">
+    <div class="my-4 text-right">
+      <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
+    </div>
     <h3>COMPLETE YOUR PERSONAL INFO</h3>
     <p class="text-muted">Employers will use this information to contact you.</p>
     <form class="col-md-8" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -63,7 +69,7 @@
     </form>
   </div>
   <?php
-  include('../dashboard/includes/endsidebar.php');
+  include("includes/endsidebar.php");
   ?>
 </body>
 

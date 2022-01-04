@@ -17,7 +17,7 @@
         <div class="my-4 text-right">
             <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
         </div>
-        Language
+        Edit Project work
     </div>
       <?php 
    include('../dashboard/includes/endsidebar.php');

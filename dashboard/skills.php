@@ -7,16 +7,18 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="../dashboard/assets/sidebar.css">
 <title>Skills</title>
 </head>
 <body>
 <?php 
    include('../dashboard/includes/sidebar.php');
    ?>
-      <div class="container-fluid">
+      <div class="main">
+        <div class="my-4 text-right">
+            <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
+        </div>
         Skills
-      </div>
+    </div>
       <?php 
    include('../dashboard/includes/endsidebar.php');
    ?>

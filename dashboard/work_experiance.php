@@ -17,8 +17,12 @@
    <?php
    include('../dashboard/includes/sidebar.php');
    ?>
-   <!-- already exiting data -->
-   <div class="container-fluid my-2">
+  <div class="main">
+  <div class="my-4 text-right">
+            <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
+        </div>
+      <!-- already exiting data -->
+   <div class="container-fluid my-3">
       <div class="row border p-3 align-items-center bg-light">
          <div class="col-md-8">
             <p class="mb-0">All job details should appear her</p>
@@ -73,6 +77,7 @@
          </div>
       </form>
    </div>
+  </div>
 
    <?php
    include('../dashboard/includes/endsidebar.php');

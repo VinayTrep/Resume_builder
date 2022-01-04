@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="../dashboard/assets/sidebar.css">
-<title>Project Work</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="Description" content="Enter your description here" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <title>Project Work</title>
 </head>
+
 <body>
-<?php 
+   <?php
    include('../dashboard/includes/sidebar.php');
    ?>
-      <div class="container-fluid">
-        Project Work
+   <div class="main">
+      <div class="my-4 text-right">
+         <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
       </div>
-      <?php 
+      Edit Project work
+   </div>
+   <?php
    include('../dashboard/includes/endsidebar.php');
    ?>
 </body>
+
 </html>
