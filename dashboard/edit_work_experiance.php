@@ -20,6 +20,9 @@
     <div class="main">
         <div class="my-4 text-right">
             <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
+            <a href="logout.php" class="text-blue px-4 py-3 text-white rounded">
+                Logout &nbsp; <i class="fas fa-sign-out-alt"></i>
+            </a>
         </div>
         <!-- already exiting data -->
         <div class="container-fluid my-3">

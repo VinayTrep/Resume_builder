@@ -71,8 +71,8 @@
         <span class="text-white p-3 rounded my-2" style="background-color: #00000073;">BUILD YOUR RESUME</span>
     </div>
     <div class="col-md-6 text-right">
-        <a href="#" class="btn btn-warning">Sign-up</a>
-        <a href="#" class="btn btn-warning"> Sign in</a>
+        <a href="sign_up.php" class="btn btn-warning">Sign-up</a>
+        <a href="sign_in.php" class="btn btn-warning"> Sign in</a>
     </div>
 </div>
 </div>

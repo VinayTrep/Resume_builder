@@ -85,7 +85,7 @@ if (isset($_POST['signup'])) {
                         </div>
                         <button type="submit" name="signup" class="btn btn-success d-block w-50 mx-auto">Sign Up</button>
                     </form>
-                    <p class="text-center mt-2">Already have an account? <a href="#" class="text-warning">Sign in</a></p>
+                    <p class="text-center mt-2">Already have an account? <a href="sign_in.php" class="text-warning">Sign in</a></p>
                 </div>
             </div>
         </div>

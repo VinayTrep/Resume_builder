@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('./includes/connect.php');
 ?>
 <?php
@@ -12,6 +13,10 @@ include('./includes/connect.php');
       if ($row['u_email'] == $u_email) {
         if ($u_pass == $row['u_password']) {
           $suc="login successfull";
+          $_SESSION['u_name']=$row['u_name'];
+          $_SESSION['u_id']=$row['id'];
+          $_SESSION['is_active']='TRUE';
+          header('location:dashboard');
         } else {
           $err= "password doesn't match";
         }
@@ -85,7 +90,7 @@ include('./includes/connect.php');
             <button name="submit" type="submit" class="btn d-block bg-success w-50 mx-auto text-white mt-4">Sign in</button>
           </form>
           <h6 class="text-center mt-4"><a href="reset.php"><span>I forgot my password</span></a></h6>
-          <div class="mt-3 text-center f-4 c-warning">Don't have an account? <a href="#">Sign Up</a></div>
+          <div class="mt-3 text-center f-4 c-warning">Don't have an account? <a href="sign_up.php">Sign Up</a></div>
         </div>
       </div>
     </div>
