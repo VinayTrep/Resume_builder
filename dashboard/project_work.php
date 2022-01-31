@@ -22,7 +22,7 @@
             Logout &nbsp; <i class="fas fa-sign-out-alt"></i>
          </a>
       </div>
-      Edit Project work
+    Project work
    </div>
    <?php
    include('../dashboard/includes/endsidebar.php');

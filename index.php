@@ -90,13 +90,13 @@
     <div class="container  w-100 mb-3">
         <div class="row ">
             <div class="col-md-4 mt-4 mb-md-2 p-relative"><img src="../resume/images/main1.jpg" alt="" width="100%">
-                <a href=""><button class="b1 w-40 p-10px bg-warning border rounded">Select</button></a>
+                <a href="sign_in.php"><button class="b1 w-40 p-10px bg-warning border rounded">Select</button></a>
             </div>
             <div class="col-md-4 mt-4 mb-md-2 p-relative"><img src="../resume/images/main2.jpg " alt=" " width="100% ">
-                <a href=""><button class="b1 w-40 p-10px bg-warning border rounded">Select</button></a>
+                <a href="sign_in.php"><button class="b1 w-40 p-10px bg-warning border rounded">Select</button></a>
             </div>
             <div class="col-md-4 mt-4 mb-md-2 p-relative"><img src="../resume/images/main3.jpg " alt=" " width="100% ">
-                <a href=""><button class="b1 w-40 p-10px bg-warning border rounded">Select</button></a>
+                <a href="sign_in.php"><button class="b1 w-40 p-10px bg-warning border rounded">Select</button></a>
 
             </div>
         </div>

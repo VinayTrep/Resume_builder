@@ -73,31 +73,32 @@
   .active-tab {
     background-color: #2C5364 !important;
   }
+
   .text-blue {
-            background-color: #0F2027;
-        }
+    background-color: #0F2027;
+  }
 </style>
 <div class="sidenav">
   <h4 class="text-white text-center">DASHBOARD</h4>
-  
-<!-- personal info-->
+
+  <!-- personal info-->
   <button class="dropdown-btn">Personal Info
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-  <a href="index.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/index.php') {
-                                echo "active-tab";
-                              } else {
-                                echo " ";
-                              }
-                              ?>">Personal Info</a>
-  <a href="edit_personal_info.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/edit_personal_info.php') {
-                                echo "active-tab";
-                              } else {
-                                echo " ";
-                              }
-                              ?>">Edit Personal Info</a>
-   
+    <a href="index.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/index.php') {
+                                  echo "active-tab";
+                                } else {
+                                  echo " ";
+                                }
+                                ?>">Personal Info</a>
+    <a href="edit_personal_info.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/edit_personal_info.php') {
+                                              echo "active-tab";
+                                            } else {
+                                              echo " ";
+                                            }
+                                            ?>">Edit Personal Info</a>
+
   </div>
   <!-- work experience -->
   <button class="dropdown-btn">Work Experiance
@@ -123,49 +124,56 @@
   </button>
   <div class="dropdown-container">
     <a href="education.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/education.php') {
-                                            echo "active-tab";
-                                          } else {
-                                            echo " ";
-                                          }
-                                          ?>">Education</a>
+                                      echo "active-tab";
+                                    } else {
+                                      echo " ";
+                                    }
+                                    ?>">Education</a>
     <a href="edit_education.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/edit_education.php') {
-                                                echo "active-tab";
-                                              } else {
-                                                echo " ";
-                                              }
-                                              ?>">Edit Education</a>
+                                          echo "active-tab";
+                                        } else {
+                                          echo " ";
+                                        }
+                                        ?>">Edit Education</a>
   </div>
   <!-- skills -->
   <a href="skills.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/skills.php') {
-                                                echo "active-tab";
-                                              } else {
-                                                echo " ";
-                                              }
-                                              ?>">Skills</a>
-<!-- language  -->
+                                echo "active-tab";
+                              } else {
+                                echo " ";
+                              }
+                              ?>">Skills</a>
+  <!-- language  -->
   <a href="language.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/language.php') {
-                                                echo "active-tab";
-                                              } else {
-                                                echo " ";
-                                              }
-                                              ?>">Language</a>
+                                  echo "active-tab";
+                                } else {
+                                  echo " ";
+                                }
+                                ?>">Language</a>
   <!-- Project -->
   <button class="dropdown-btn">Project Work
     <i class="fa fa-caret-down"></i>
   </button>
+  <a href="preview.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/preview.php') {
+                                  echo "active-tab";
+                                } else {
+                                  echo " ";
+                                }
+                                ?>">preview</a>
+  </div>
   <div class="dropdown-container">
     <a href="project_work.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/project_work.php') {
-                                            echo "active-tab";
-                                          } else {
-                                            echo " ";
-                                          }
-                                          ?>">Project Work</a>
+                                        echo "active-tab";
+                                      } else {
+                                        echo " ";
+                                      }
+                                      ?>">Project Work</a>
     <a href="edit_project_work.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/edit_project_work.php') {
-                                                echo "active-tab";
-                                              } else {
-                                                echo " ";
-                                              }
-                                              ?>">Edit Project Work</a>
-  </div>
+                                              echo "active-tab";
+                                            } else {
+                                              echo " ";
+                                            }
+                                            ?>">Edit Project Work</a>
+ 
 
 </div>

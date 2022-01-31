@@ -7,7 +7,7 @@ include('./includes/connect.php');
       $u_email = $_POST['u_email'];
       $u_pass = $_POST['u_password'];
       //sql to check if the user exist
-      $sql = "SELECT * FROM user_login_details WHERE u_email='$u_email'";
+      $sql = "SELECT * FROM user_login_details WHERE u_email='$u_email' && u_password='$u_pass'";
       $result = $con->query($sql);
       $row = $result->fetch(PDO::FETCH_ASSOC);
       if ($row['u_email'] == $u_email) {
