@@ -104,13 +104,9 @@ if (empty($_SESSION['u_name'])) {
               <label for="state">State</label>
               <input type="text" name="state" id="state" class="form-control" size="20" required>
             </div>
-            <div class="form-group col-3">
+            <div class="form-group col-6">
               <label for="country">Country</label>
               <input type="text" name="country" id="country" class="form-control" size="20" required>
-            </div>
-            <div class="form-group col-3">
-              <label for="zip_code">zip Code</label>
-              <input type="text" name="zip_code" id="zip_code" class="form-control" size="6" required>
             </div>
           </div>
           <div class="row">
