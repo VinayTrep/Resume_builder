@@ -1,3 +1,7 @@
+<?php 
+$link = $_SERVER['REQUEST_URI'];
+if($link =='/resume/')
+{?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,3 +108,8 @@
 </div>
 </body>
 </html>
+<?php
+}elseif($link == "/resume/*"){
+   echo "hi";
+}
+?>

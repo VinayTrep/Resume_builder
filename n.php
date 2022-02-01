@@ -8,157 +8,97 @@
     <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Title</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            margin: 0;
-            padding: 0;
-        }
-
-        .row {
-            padding: 0;
-            margin: 0;
-        }
-
-        .bg-darkcyan {
-            background-color: darkcyan;
-        }
-
-        i {
-            shape-outside: margin-box;
-        }
-
-        .bg-aqua {
-            background-color: cadetblue
-        }
-
-        div {
-            margin: 0;
-            padding: 0;
-        }
-
-        span {
-            text-align: center;
-        }
-
-        .font {
-            font-size: large;
-            text-align: unset;
-            letter-spacing: 1px;
-        }
-
-        i {
-            color: black;
-        }
-
-        .font-30 {
-            font-size: 75%;
-        }
-    </style>
+    <link rel="stylesheet" href="css/css4.css">
+    <title>resume</title>
 </head>
 
 <body>
-    <div class="container m-0 p-0">
-        <div class="row m-0 p-0">
-            <div class="col-md-5 m-0 p-0">
-                <div class="bg-darkcyan m-0 p-0">
-                    <h1 class="text-white text-center p-2 mb-2">Sanjay</h1>
-                    <h4 class="text-white text-center mb-5">Business Development Manager</h4>
-                    <div class="text-white text-center p-2"><i>" Professional Business Developer With <br>MOre Than Four
-                            Years
-                            Experience in the <br> Business Development Process. <br>Involved in Product Testing and <br>Development
-                            Of
-                            New Business <br>Opportunities. "</i>
+    <div class="conatiner w-75 mx-auto mt-4 border">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="p-3 secondary-background ternary-color">
+                    <div class="text-center">
+                        <h2>Sanjay</h2>
+                        <small>Business Developmet officer</small>
                     </div>
+                    <p class="pt-3 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, possimus aliquam dicta error fuga veniam quasi quos dolore excepturi ad. Quis mollitia soluta, qui consectetur ad architecto libero necessitatibus voluptate.</p>
                 </div>
-
-                <!-- PERSONAL info start  -->
-                <div class="bg-aqua m-0 p-0">
-                    <div><i class="fas fa-book ml-3"><span class="text-white p-2 ml-5 mb-3 font-weight-lighter font">PERSONAL
-                                INFO</span></i>
-                    </div>
-                    <div class="mt-md-4">
-                        <i class="fas fa-asterisk ml-3"></i><b><span class="text-black ml-4 p-md-1">202-505-6660</span></b><br>
-                        <i class="fas fa-asterisk ml-3"></i><b><span class="text-black ml-4 p-md-1">yadali@gmail.com</span></b><br>
-                        <i class="fas fa-asterisk ml-3"></i><b><span class=" p-md-1 text-black ml-4">New York,USA</span></b><br>
-                        <i class="fas fa-asterisk ml-3 p-md-1"></i><b><span class="text-black ml-4">yadali10</span></b>
-                    </div>
-                    <div class="skills mt-md-3">
-                        <i class="fas fa-tools ml-3"></i><b><span class="text-white ml-5 font-weighter-lighter font">PROFESSIONAL SKILLS</span></b>
-                        <br>
-                        <u>
-                            <h6 class="text-white ml-4 p-2 ">Google Analystics</h6>
-                        </u>
-                        <i class="far fa-horizontal-rule" style="user-select: auto;"></i>
-                        <u>
-                            <h6 class="text-white ml-4 p-2 ">Public Communication</h6>
-                        </u>
-                        <i class="far fa-horizontal-rule" style="user-select: auto;"></i>
-                        <u>
-                            <h6 class="text-white ml-4 p-2 ">Email Marketing </h6>
-                        </u>
-                        <i class="far fa-horizontal-rule" style="user-select: auto;"></i>
-                        <u>
-                            <h6 class="text-white ml-4 p-2 ">Sales Marketing</h6>
-                        </u>
-                        <i class="far fa-horizontal-rule" style="user-select: auto;"></i>
-                    </div>
-                    <div class="language">
-                        <i class="fas fa-edit ml-3"><span class="text-white ml-md-5 font-weighter-lighter fontmb-3">LANGUAGES</span></i>
-                        <u>
-                            <h6 class="text-white ml-3 mt-2">ENGLISH</h6>
-                        </u>
-                        <i class="far fa-horizontal-rule" style="user-select: auto;"></i>
-                        <u>
-                            <h6 class="text-white ml-3">KANNADA</h6>
-                        </u>
-                        <i class="far fa-horizontal-rule" style="user-select: auto;"></i>
-                    </div>
-                    <div class="hobby ">
-                        <i class="fas fa-gamepad ml-3"><span class="text-white ml-md-5 font-weighter-lighter fontmb-3">HOBBIES</span></i>
-                        <div class="d-flex">
-                            <p>Reading</p>
-                            <p class="text-right">Traveling</p>
-                        </div>
-                        <p>Music</p><span class="text-right mr-0 p-0">Traveling</span>
+                <div class="p-3 primary-background">
+                    <h6 class="ternary-color"><i class="fas fa-user-check"></i>&nbsp; PERSONAL INFO</h6>
+                    <div class="pl-1 pt-2">
+                        <span class="d-block"><i class="fas fa-phone"></i>&nbsp; 9535812944</span>
+                        <span class="d-block"><i class="fas fa-envelope-square"></i>&nbsp; demo@gmail.com</span>
+                        <span class="d-block"><i class="fas fa-map-marker-alt"></i>&nbsp; Doddaballapur D-cross Banglore north 561203</span>
 
                     </div>
+                    <!-- Professional skills  -->
+                    <h6 class="ternary-color pt-3"><i class="fas fa-tools"></i>&nbsp; PROFESSIONAL SKILLS</h6>
+                    <div class="pl-1 pt-2">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JAVA SCRIPT</li>
+                        </ul>
+                    </div>
+                    <!-- language  -->
+                    <h6 class="ternary-color pt-3"><i class="fas fa-pen"></i>&nbsp; Language</h6>
+                    <div class="pl-1 pt-2">
+                        <ul>
+                            <li>Kannada</li>
+                            <li>English</li>
+                            <li>Hindi</li>
+                        </ul>
+                    </div>
+                    <!-- project works  -->
+                    <h6 class="ternary-color pt-3"><i class="fas fa-laptop"></i>&nbsp; PROJECT WORK</h6>
+                    <p class="card-title m-0 pt-3"><a href="#" class="secondary-color"><strong>Project Name</strong></a></p>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nisi reiciendis ad fugit dolor, molestias error adipisci iste atque obcaecati perferendis. Incidunt, dicta! Et atque dolore reiciendis commodi optio! Assumenda!</small>
+                    <p class="card-title m-0 pt-3"><a href="#" class="secondary-color"><strong>Project Name</strong></a></p>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nisi reiciendis ad fugit dolor, molestias error adipisci iste atque obcaecati perferendis. Incidunt, dicta! Et atque dolore reiciendis commodi optio! Assumenda!</small>
                 </div>
             </div>
-            <div class="col-md-7">
-                <div class="work mt-md-5 ml-4">
-                    <i class="fas fa-briefcase rounded" style="font-size: 2.73em"><span class="text-success ml-3">WORK EXPERIENCE</span></i><br>
-                    <br>
-                    <h4>Business Development Manager</h4>
-                    <h5>Air State Solution</h4>
-                        <u><a href="#">09/2014-09/2018</a></u>
-                        <br>
-                        <h5>Successfully managed $2-$3 million budget projects and Successfully <br>Achieved the project schedule goals</h5>
-                        <h2><b>Business Development Manager</b></h2>
-                        <h5>Air State Solution</h5>
-                        <u><a href="#">09/2014-09/2018</a></u><br>
-                        <h5>Development and implemented new marketing sales plans and define the strategy for the next five years </h5>
-                        <h2><b>Business Development Manager</b>
-                        </h2>
-                        <u><a href="#">09/2014-09/2018</a></u><br>
-                        <h5>Ensured that new clients will grow into a loyal customs based on specialist Nick market by implementing new programs</h5><br>
-                        <i class="fas fa-graduation-cap" style="font-size: 2.73em"><span class="text-success ml-3 font-30">EDUCATION ATTAINMENT</span></i><br>
-                        <br>
-                        <h5>Master in computer science (MCS) and Business Administration (BBA) univerity of chicago,USA</h5>
-                        <u><a href="#">09/2006-09/2009</a></u><br>
-                        <h5>subject that we have studied in BCS and Business Administration are Database, Networking ,object Oriented Programming ,Artificial Intelligence and Business Ethnics</h5><br>
-                        <i class='fas fa-desktop' style='font-size:30px'><span class="text-success ml-3">PROJECT WORK</span></i><br></i>
-                        <h5>Excellence and Customer Partnering awards</h5>
-                        <h5>Sales indiviudals and Business Development Awards</h5>
+            <div class="col-md-8">
+                <div class="p-3">
+                    <h3 class="primary-color"><i class="fas fa-briefcase secondary-color circle"></i>&nbsp; WORK EXPERIANCE</h3>
+                    <div class="pt-3">
+                        <h5>Business Development manager</h5>
+                        <p class="card-title m-0">Air state solutions</p>
+                        <small class="card-title primary-color">2021-2022</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aperiam possimus unde? Aperiam, error corrupti dolor quia, nisi reprehenderit assumenda molestias molestiae itaque consequuntur, vel animi unde quam reiciendis voluptas.</p>
+                    </div>
+                    <div class="pt-3">
+                        <h5>Business Development manager</h5>
+                        <p class="card-title m-0">Air state solutions</p>
+                        <small class="card-title primary-color">2021-2022</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aperiam possimus unde? Aperiam, error corrupti dolor quia, nisi reprehenderit assumenda molestias molestiae itaque consequuntur, vel animi unde quam reiciendis voluptas.</p>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <h3 class="primary-color"><i class="fas fa-graduation-cap circle"></i>&nbsp; EDUCATION ATTAINMENT</h3>
+                    <!-- school info  -->
+                    <h5 class="pt-3">Board</h5>
+                    <p class="card-title m-0"><b>School name:</b> </p>
+                    <small class="card-title primary-color"><b>YOP:</b> 2022</small>
+                    <p> Marks:<strong>557/625</strong> Percent: <strong>89.12%</strong></p>
+
+                    <!-- puc  -->
+                    <h5 class="pt-3">Board</h5>
+                    <p class="card-title m-0"><b>College name:</b> </p>
+                    <p class="card-title m-0"><b>Branch:</b> </p>
+                    <p class="card-title m-0"><b>Course:</b> </p>
+                    <small class="card-title primary-color"><b>YOP:</b> 2022</small>
+                    <p> Marks:<strong>557/600</strong> Percent: <strong>91%</strong></p>
+
+                    <!-- UG -->
+                    <h5 class="pt-3">Board</h5>
+                    <p class="card-title m-0"><b>College name:</b> </p>
+                    <p class="card-title m-0"><b>Course:</b> </p>
+                    <small class="card-title primary-color"><b>YOP:</b> 2022</small>
+                    <p> CGPA:<strong>&nbsp; 9</strong></p>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 

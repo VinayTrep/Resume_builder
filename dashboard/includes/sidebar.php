@@ -101,23 +101,13 @@
 
   </div>
   <!-- work experience -->
-  <button class="dropdown-btn">Work Experiance
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a href="work_experiance.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/work_experiance.php') {
-                                            echo "active-tab";
-                                          } else {
-                                            echo " ";
-                                          }
-                                          ?>">Work Experiance</a>
-    <a href="edit_work_experiance.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/edit_work_experiance.php') {
-                                                echo "active-tab";
-                                              } else {
-                                                echo " ";
-                                              }
-                                              ?>">Edit Work Experiance</a>
-  </div>
+  <a href="work_experiance.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/work_experiance.php') {
+                                          echo "active-tab";
+                                        } else {
+                                          echo " ";
+                                        }
+                                        ?>">Work Experiance</a>
+
   <!-- Education -->
   <button class="dropdown-btn">Education
     <i class="fa fa-caret-down"></i>
@@ -151,29 +141,17 @@
                                 }
                                 ?>">Language</a>
   <!-- Project -->
-  <button class="dropdown-btn">Project Work
-    <i class="fa fa-caret-down"></i>
-  </button>
+  <a href="project_work.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/project_work.php') {
+                                      echo "active-tab";
+                                    } else {
+                                      echo " ";
+                                    }
+                                    ?>">Project Work</a>
+  <!-- preview  -->
   <a href="preview.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/preview.php') {
                                   echo "active-tab";
                                 } else {
                                   echo " ";
                                 }
                                 ?>">preview</a>
-  </div>
-  <div class="dropdown-container">
-    <a href="project_work.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/project_work.php') {
-                                        echo "active-tab";
-                                      } else {
-                                        echo " ";
-                                      }
-                                      ?>">Project Work</a>
-    <a href="edit_project_work.php" class="<?php if ($_SERVER['PHP_SELF'] == '/resume/dashboard/edit_project_work.php') {
-                                              echo "active-tab";
-                                            } else {
-                                              echo " ";
-                                            }
-                                            ?>">Edit Project Work</a>
- 
-
 </div>

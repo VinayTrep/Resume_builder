@@ -85,7 +85,7 @@ if (empty($_SESSION['u_name'])) {
                 $row=$result1->fetch(PDO::FETCH_ASSOC);
                 ?>
                 <!-- end  -->
-                <h3>COMPLETE YOUR PERSONAL INFO</h3>
+                <h3>EDIT PERSONAL INFO</h3>
                 <p class="text-muted">Employers will use this information to contact you.</p>
                 <form class="col-md-8" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <div class="row">

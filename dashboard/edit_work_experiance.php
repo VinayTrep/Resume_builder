@@ -33,8 +33,8 @@ $id = isset($_GET['id'])? $_GET['id']: '';
          $work = "UPDATE user_experience SET u_id=$u_id,u_employer='$u_employer',u_jobtitle='$u_jobtitle',u_job_start='$u_job_start',u_job_end='$u_job_end',u_job_discription='$job_discription' WHERE id=$id";
          $smtp=$con->prepare($work);
          $smtp->execute();
-         $msg = "successfully inserted";
-         header('location:work_experiance.phpmsg='.$msg);
+         $msg = "Updated successfully";
+         header('location:work_experiance.php?msg='.$msg);
       }
    ?>
    <?php
@@ -70,7 +70,7 @@ $id = isset($_GET['id'])? $_GET['id']: '';
       ?>
       <!-- form to accept new experience  -->
       <div class="container-fluid">
-         <h3>EXPERIENCE</h3>
+         <h3>EDIT EXPERIENCE</h3>
          <p class="text-muted">List your work experience, from the most recent to the oldest.</p>
          <form class="col-md-8" method="POST">
             <!-- <?php echo $_SERVER['PHP_SELF']; ?> -->

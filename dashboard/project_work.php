@@ -53,7 +53,7 @@ if (empty($_SESSION['u_name'])) {
             <div class="col-md-6 text-center">
                <?php
                $msg= isset($_GET['msg'])? $_GET['msg']:'';
-               if (isset($msg)) {
+               if (isset($msg)  && !empty($msg)) {
                   echo "<span class='alert alert-success'>" . $msg . "</span>";
                }
                if (isset($err)) {
@@ -92,7 +92,7 @@ if (empty($_SESSION['u_name'])) {
          ?>
          <div class="row">
             <div class="col-md-6 text-right"><button class="btn btn-warning" onclick="show()">Add Experiance</button></div>
-            <div class="col-md-6 text-right"><a href="education.php" class="btn btn-success px-4">next</a></div>
+            <div class="col-md-6 text-right"><a href="preview.php" class="btn btn-success px-4">Next</a></div>
          </div>
          <form id="showdiv" method="POST" action="<?php print $_SERVER['PHP_SELF']; ?>">
             <h3 class="my-4">Project Works</h3>

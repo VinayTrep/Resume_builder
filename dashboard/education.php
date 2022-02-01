@@ -8,6 +8,7 @@ if (empty($_SESSION['u_name'])) {
 } else {
    $sql = "SELECT u_id from user_school_education where u_id=$u_id ";
    $result = $con->query($sql);
+   if($result->rowCount() == 0){
 ?>
    <!DOCTYPE html>
    <html lang="en">
@@ -214,6 +215,7 @@ if (empty($_SESSION['u_name'])) {
                         <input type="date" class="form-control" name="u_ug_yop">
                      </div>
                      <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+                     <a href="skills.php" class="btn btn-primary">Next</a>
                   </form>
                </div>
          </div>
@@ -224,5 +226,8 @@ if (empty($_SESSION['u_name'])) {
 
    </html>
 <?php
+}else{
+   header('LOCATION:edit_education.php');
+}
 }
 ?>

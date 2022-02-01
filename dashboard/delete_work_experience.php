@@ -5,7 +5,7 @@ $id=$_GET['id'];
 try{
     $sql="DELETE FROM user_experience WHERE id=$id";
     $con->exec($sql);
-    $msg="deleted successfully";
+    $msg="Deleted successfully";
 }catch(PDOException $e){
     $msg="something went wrong";
 }

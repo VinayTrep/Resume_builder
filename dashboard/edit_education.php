@@ -95,7 +95,7 @@ if (empty($_SESSION['u_name'])) {
             <!-- School Education  -->
             <div class="container">
                 <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                    <h3>School Education</h3>
+                    <h3>Edit School Education</h3>
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
@@ -225,6 +225,7 @@ if (empty($_SESSION['u_name'])) {
                                 <input type="date" class="form-control" name="u_ug_yop" value="<?php print $row_ug['u_ug_yop']; ?>">
                             </div>
                             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+                            <a href="skills.php" class="btn btn-primary">Next</a>
                         </form>
                     </div>
             </div>

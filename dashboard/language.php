@@ -44,10 +44,9 @@ if(empty($_SESSION['u_name'])){
 <?php
    if(isset($_POST['submit'])){
       $lang=$_POST['language'];
-      echo $lang;
       try{
-         $lang = $con->prepare("UPDATE skills_and_language SET language_name='$lang' WHERE $u_id=u_id");   
-          $lang->execute();
+         $language = $con->prepare("UPDATE skills_and_language SET language_name='$lang' WHERE u_id=$u_id");   
+          $language->execute();
           $msg="Data Inserted Successfully";
       }catch(PDOException $e){
          $err = "error: " . $e->getMessage();
