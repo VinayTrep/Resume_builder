@@ -63,7 +63,6 @@ $id = isset($_GET['id'])? $_GET['id']: '';
          <div class="col-md-6 text-right"><a href="education.php" class="btn btn-success px-4">Next</a></div>
       </div>
         <?php
-      
       $sql="SELECT * FROM user_experience WHERE id=$id";
       $result=$con->query($sql);
       $row=$result->fetch(PDO::FETCH_ASSOC);
