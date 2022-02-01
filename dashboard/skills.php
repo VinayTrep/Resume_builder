@@ -75,17 +75,18 @@ include('../includes/connect.php');
       </div>
       <h1>Skills</h1>
       <p>highlight 6-8 of your top Skills</p>
+      <p>use comma while writing your skills</p>
       <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
          <div class="form-group align-items-center">
             <label for="skills"><b></b></label>
-            <input type="text" class="w-50 border border-dark form-control" id="language" name="skill">
+            <input type="text" class="w-50 border border-dark form-control" id="language" name="skill" placeholder="eg:- Html,css,java script">
          </div>
          <div class="row mt-6">
             <div class="col-2 text-center">
-               <input class="p-3 rounded bg-success" type="submit" name="submit" value="submit">
+               <input class="text-white border rounded bg-primary p-2 m-2" type="submit" name="submit" value="submit">
             </div>
             <div class="col-7 text-center">
-               <a href="language.php" class="p-3  text-dark  rounded bg-success d-inline-block">Next</a>
+               <a href="language.php" class="text-white border rounded bg-primary p-2 m-2">Next</a>
             </div>
          </div>
       </form>

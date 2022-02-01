@@ -46,9 +46,9 @@ if(empty($_SESSION['u_name'])){
       $lang=$_POST['language'];
       echo $lang;
       try{
-         $lang = $con->prepare("UPDATE skills_and_language SET language_name='$lang' WHERE $u_id=u_id");   
-          $lang->execute();
-          $msg="Data Inserted Successfully";
+         $language = $con->prepare("UPDATE skills_and_language SET language_name='$lang' WHERE $u_id=u_id");   
+          $language->execute();
+          $msg="Data Updated Successfully";
       }catch(PDOException $e){
          $err = "error: " . $e->getMessage();
       }
@@ -81,15 +81,15 @@ if(empty($_SESSION['u_name'])){
       <p>highlight 6-8 of your top language</p>
       <form action="" method="POST">
          <div class="form-group align-items-center">
-            <label for="skills"><b></b></label>
+            <label><b></b></label>
             <input type="text" class="w-50 border border-dark form-control" id="language" name="language">
          </div>
          <div class="row mt-6">
             <div class="col-2 text-center">
-               <input class="p-3 outline-primary  rounded bg-success" type="submit" name="submit" value="submit">
+               <input class="text-white border rounded bg-primary p-2 m-2" type="submit" name="submit" value="submit">
             </div>
             <div class="col-7 text-center">
-               <a href="project_work.php" class="p-3  text-dark  rounded bg-success d-inline-block">Next</a>
+               <a href="project_work.php" class="text-white border rounded bg-primary p-2 m-2">Next</a>
             </div>
          </div>
       </form>
