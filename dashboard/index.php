@@ -1,64 +1,64 @@
-<?php
-session_start();
-include('../includes/connect.php');
-$name = $_SESSION['u_name'];
-$u_id = $_SESSION['u_id'];
-if (empty($_SESSION['u_name'])) {
-  header('LOCATION:../sign_in.php');
-} else {
-  $sql = "SELECT * from user_info where u_id=$u_id";
-  $result = $con->query($sql);
-  if ($result->rowCount() == 0) {
-?>
-    <!DOCTYPE html>
-    <html>
+ <?php
+  session_start();
+  include('../includes/connect.php');
+  $name = $_SESSION['u_name'];
+  $u_id = $_SESSION['u_id'];
+  if (empty($_SESSION['u_name'])) {
+    header('LOCATION:../sign_in.php');
+  } else {
+    $sql = "SELECT * from user_info where u_id=$u_id";
+    $result = $con->query($sql);
+    if ($result->rowCount() == 0) {
+  ?>
+     <!DOCTYPE html>
+     <html>
 
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-      <script src="//cdn.ckeditor.com/4.17.1/basic/ckeditor.js"></script>
-      <style>
-        .text-blue {
-          background-color: #0F2027;
-        }
-      </style>
-    </head>
+     <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+       <script src="//cdn.ckeditor.com/4.17.1/basic/ckeditor.js"></script>
+       <style>
+         .text-blue {
+           background-color: #0F2027;
+         }
+       </style>
+     </head>
 
-    <body>
-      <?php
-      include("includes/sidebar.php");
-      ?>
-      <!-- code to insert data into user_info table  -->
-      <?php
-      if (isset($_POST['submit'])) {
-        if ($result->rowCount() == 0) {
-          try {
-            $user_info = $con->prepare("INSERT INTO user_info (u_id,first_name,last_name,user_email,user_state,user_country,user_address,user_mobile_number,user_discription) VALUES (:u_id,:first_name,:last_name,:user_email,:user_state,:user_country,:user_address,:user_mobile_number,:user_discription)");
+     <body>
+       <?php
+        include("includes/sidebar.php");
+        ?>
+       <!-- code to insert data into user_info table  -->
+       <?php
+        if (isset($_POST['submit'])) {
+          if ($result->rowCount() == 0) {
+            try {
+              $user_info = $con->prepare("INSERT INTO user_info (u_id,first_name,last_name,user_email,user_state,user_country,user_address,user_mobile_number,user_discription) VALUES (:u_id,:first_name,:last_name,:user_email,:user_state,:user_country,:user_address,:user_mobile_number,:user_discription)");
 
-            $user_info->bindParam(':u_id', $u_id);
-            $user_info->bindParam(':first_name', $_POST['firstname']);
-            $user_info->bindParam(':last_name', $_POST['lastname']);
-            $user_info->bindParam(':user_email', $_POST['e_mail']);
-            $user_info->bindParam(':user_state', $_POST['state']);
-            $user_info->bindParam(':user_country', $_POST['country']);
-            $user_info->bindParam(':user_address', $_POST['address']);
-            $user_info->bindParam(':user_mobile_number', $_POST['mobile_number']);
-            $user_info->bindParam(':user_discription', $_POST['user_discription']);
+              $user_info->bindParam(':u_id', $u_id);
+              $user_info->bindParam(':first_name', $_POST['firstname']);
+              $user_info->bindParam(':last_name', $_POST['lastname']);
+              $user_info->bindParam(':user_email', $_POST['e_mail']);
+              $user_info->bindParam(':user_state', $_POST['state']);
+              $user_info->bindParam(':user_country', $_POST['country']);
+              $user_info->bindParam(':user_address', $_POST['address']);
+              $user_info->bindParam(':user_mobile_number', $_POST['mobile_number']);
+              $user_info->bindParam(':user_discription', $_POST['user_discription']);
 
-            $user_info->execute();
-            $msg = "successfully inserted";
-          } catch (PDOException $e) {
-            $err = "error: " . $e->getMessage();
+              $user_info->execute();
+              $msg = "successfully inserted";
+            } catch (PDOException $e) {
+              $err = "error: " . $e->getMessage();
+            }
+          } else {
+            $err = "Your data already exists";
           }
-        } else {
-          $err = "Your data already exists";
         }
-      }
-      ?>
-      <div class="main">
-        <!-- <?php
+        ?>
+       <div class="main">
+         <!-- <?php
               echo $name;
               ?> -->
         <div class="my-4">
@@ -127,18 +127,18 @@ if (empty($_SESSION['u_name'])) {
         </form>
       </div>
 
-      <?php
-      include("includes/endsidebar.php");
-      ?>
-      <script>
-        CKEDITOR.replace('user_discription');
-      </script>
-    </body>
+       <?php
+        include("includes/endsidebar.php");
+        ?>
+       <script>
+         CKEDITOR.replace('user_discription');
+       </script>
+     </body>
 
-    </html>
-<?php
-  } else {
-    header('location:edit_personal_info.php');
+     </html>
+ <?php
+    } else {
+      header('location:edit_personal_info.php');
+    }
   }
-}
-?>
+  ?>

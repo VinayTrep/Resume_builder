@@ -48,6 +48,7 @@ include('../includes/connect.php');
       try{
          $skills = $con->prepare("UPDATE skills_and_language SET skill_name='$skill' WHERE $u_id=u_id");   
           $skills->execute();
+          $msg="Data Inserted Sucessfully ";
       }catch(PDOException $e){
          $err = "error: " . $e->getMessage();
       }
@@ -57,9 +58,16 @@ include('../includes/connect.php');
    include('../dashboard/includes/sidebar.php');
    ?>
    <div class="main">
+   <?php
+              if (isset($msg)) {
+                echo "<span class='alert alert-success text-center d-block '>" . $msg . "</span>";
+              }
+              if (isset($err)) {
+                echo "<span class='alert alert-danger text-center d-block'>" . $err . "   <a href='edit_personal_info.php'>edit</a></span>";
+              }
+              ?>
      <div class="my-4 text-right">
-<?php echo $_SERVER['PHP_SELF'];
-?>
+     
          <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
          <a href="logout.php" class="text-blue px-4 py-3 text-white rounded">
             Logout &nbsp; <i class="fas fa-sign-out-alt"></i>
@@ -77,7 +85,7 @@ include('../includes/connect.php');
                <input class="p-3 rounded bg-success" type="submit" name="submit" value="submit">
             </div>
             <div class="col-7 text-center">
-               <a href="" class="p-3  text-dark  rounded bg-success d-inline-block">Save and Next</a>
+               <a href="language.php" class="p-3  text-dark  rounded bg-success d-inline-block">Next</a>
             </div>
          </div>
       </form>

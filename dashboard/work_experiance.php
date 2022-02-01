@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('../includes/connect.php');
+$u_id = $_SESSION['u_id'];
+if(empty($_SESSION['u_name'])){
+   header('location:../sign_in.php');
+}else{
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,9 +19,31 @@
    <link rel="stylesheet" href="../dashboard/assets/sidebar.css">
    <script src="//cdn.ckeditor.com/4.17.1/basic/ckeditor.js"></script>
    <title>Work Expreance</title>
+   <style>
+      #showdiv {
+         display: none;
+      }
+   </style>
 </head>
 
 <body>
+   <?php
+   if (isset($_POST['submit'])) {
+      try {
+         $work = $con->prepare("INSERT INTO user_experience (u_id,u_employer,u_jobtitle,u_job_start,u_job_end,u_job_discription) VALUES(:u_id,:u_employer,:u_jobtitle,:u_job_start,:u_job_end,:job_discription)");
+         $work->bindParam(':u_id', $u_id);
+         $work->bindParam(':u_employer', $_POST['u_employer']);
+         $work->bindparam(':u_jobtitle', $_POST['u_jobtitle']);
+         $work->bindparam(':u_job_start', $_POST['u_job_start']);
+         $work->bindparam(':u_job_end', $_POST['u_job_end']);
+         $work->bindparam(':job_discription', $_POST['job_discription']);
+         $work->execute();
+         $msg = "successfully inserted";
+      } catch (PDOException $e) {
+         $err = "error" . $e->getmessage();
+      }
+   }
+   ?>
    <?php
    include('../dashboard/includes/sidebar.php');
    ?>
@@ -24,24 +54,40 @@
             Logout &nbsp; <i class="fas fa-sign-out-alt"></i>
          </a>
       </div>
+      <?php
+      if (isset($msg)) {
+         echo "<span class='alert alert-success text-center d-block'>" . $msg . "</span>";
+      }
+      if (isset($err)) {
+         echo "<span class='alert alert-success text-center d-block'>" . $err . "</span>";
+      }
+      ?>
       <!-- already exiting data -->
       <div class="container-fluid my-3">
-         <div class="row border p-3 align-items-center bg-light">
-            <div class="col-md-8">
-               <p class="mb-0">All job details should appear her</p>
-            </div>
-            <div class="col-md-4 text-right">
-               <a href="#"><i class="fas fa-edit px-2 text-dark"></i></a>
-               <a href="#"><i class="fas fa-trash-alt px-2 text-dark"></i></a>
-            </div>
-         </div>
+         <?php
+         $sql = "SELECT * FROM user_experience WHERE u_id=$u_id";
+         $result = $con->query($sql);
+         if ($result->rowCount() > 0 ) {
+            while ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
+               <div class="row border p-3 align-items-center bg-light mt-2">
+                  <div class="col-md-8">
+                     <p class="mb-0"><?php print $row['u_jobtitle']; ?></p>
+                  </div>
+                  <div class="col-md-4 text-right">
+                     <a href="edit_work_experiance.php?id=<?php print $row['id']; ?>"><i class="fas fa-edit px-2 text-dark"></i></a>
+                     <a href="delete_work_experience.php?id=<?php print $row['id']; ?>"><i class="fas fa-trash-alt px-2 text-dark"></i></a>
+                  </div>
+               </div>
+         <?php }
+         }
+         ?>
       </div>
       <div class="row">
-         <div class="col-md-6 text-right"><a href="#" class="btn btn-warning ">Add Experiance</a></div>
+         <div class="col-md-6 text-right"><button onclick="show()" class="btn btn-warning">Add Experiance</button type="b"></div>
          <div class="col-md-6 text-right"><a href="education.php" class="btn btn-success px-4">next</a></div>
       </div>
       <!-- form to accept new experience  -->
-      <div class="container-fluid">
+      <div class="container-fluid" id="showdiv">
          <h3>EXPERIENCE</h3>
          <p class="text-muted">List your work experience, from the most recent to the oldest.</p>
          <form class="col-md-8" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -49,30 +95,30 @@
             <div class="row">
                <div class="form-group col">
                   <label for="employer">Employer</label>
-                  <input type="text" class="form-control" id="employer" name="employer">
+                  <input type="text" class="form-control" id="employer" name="u_employer">
                </div>
                <div class="form-group col">
                   <label for="job_title">Job Title</label>
-                  <input type="text" class="form-control" id="job_title" name="job_title">
+                  <input type="text" class="form-control" id="job_title" name="u_jobtitle">
                </div>
             </div>
             <div class="row">
                <div class="col-md-6">
                   <label for="start_date">Start Date</label>
                   <div class="">
-                     <input type="month" name="start_date" id="month">
+                     <input type="month" name="u_job_start" id="month">
                   </div>
                </div>
                <div class="col-md-6">
                   <label for="end_date">End Date</label>
                   <div class="">
-                     <input type="month" name="end_date" id="month">
+                     <input type="month" name="u_job_end" id="month">
                   </div>
                </div>
             </div>
             <div class="py-4">
                <label for="">Job Description</label>
-               <textarea name="editor1"></textarea>
+               <textarea name="job_discription"></textarea>
             </div>
             <div class="row">
                <div class="col-md-6"><a href="index.php" class="btn text-dark border">Back</a></div>
@@ -86,8 +132,21 @@
    include('../dashboard/includes/endsidebar.php');
    ?>
    <script>
-      CKEDITOR.replace('editor1');
+      CKEDITOR.replace('job_discription');
+   </script>
+   <script>
+      function show() {
+         x = document.getElementById('showdiv');
+         if (x.style.display === "none") {
+            x.style.display = "block";
+         } else {
+            x.style.display = "none";
+         }
+      }
    </script>
 </body>
 
 </html>
+<?php 
+   }
+   ?>

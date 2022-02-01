@@ -48,13 +48,26 @@ if(empty($_SESSION['u_name'])){
       try{
          $lang = $con->prepare("UPDATE skills_and_language SET language_name='$lang' WHERE $u_id=u_id");   
           $lang->execute();
+          $msg="Data Inserted Successfully";
       }catch(PDOException $e){
          $err = "error: " . $e->getMessage();
       }
    }
    ?>
    <?php
+   
    include('../dashboard/includes/sidebar.php');
+   ?>
+   <?php 
+   if(isset($msg))
+   {
+      echo"<span class='alert alert-success d-block text-center'>".$msg."</span>";
+   
+   }
+   if(isset($err))
+   {
+      echo"<span class='alert alert-danger d-block text-center'>".$err."</span>";
+   }
    ?>
    <div class="main">
       <div class="my-4 text-right">
@@ -76,7 +89,7 @@ if(empty($_SESSION['u_name'])){
                <input class="p-3 outline-primary  rounded bg-success" type="submit" name="submit" value="submit">
             </div>
             <div class="col-7 text-center">
-               <a href="" class="p-3  text-dark  rounded bg-success d-inline-block">Save and Next</a>
+               <a href="project_work.php" class="p-3  text-dark  rounded bg-success d-inline-block">Next</a>
             </div>
          </div>
       </form>

@@ -15,6 +15,9 @@ if (isset($_POST['signup'])) {
                 $sql2 = "INSERT INTO user_login_details (u_name,u_email,u_password) VALUES('$u_name','$u_email','$u_password')";
                 $con->exec($sql2);
                 $msg = "Your Account is Succesfully Created";
+                $last_id = $con->lastInsertId();
+                $sql3="INSERT INTO skills_and_language (u_id) VALUES ($last_id)";
+                $con->exec($sql3);
             } catch (PDOException $e) {
                 $err = "Error" . $e->getMessage();
             }
