@@ -73,7 +73,7 @@ $id = isset($_GET['id'])? $_GET['id']: '';
          <p class="text-muted">List your work experience, from the most recent to the oldest.</p>
          <form class="col-md-8" method="POST">
             <!-- <?php echo $_SERVER['PHP_SELF']; ?> -->
-            <div class="row">
+            <div class="">
                <div class="form-group col">
                   <label for="employer">Employer</label>
                   <input type="text" class="form-control" id="employer" name="u_employer" value="<?php  print $row['u_employer']; ?>">
@@ -102,8 +102,8 @@ $id = isset($_GET['id'])? $_GET['id']: '';
                <textarea name="job_discription"><?php print $row['u_job_discription'];?></textarea>
             </div>
             <div class="row">
-                <div class="col-md-6"><input type="submit" value="Submit" name="submit"></div>
-               <div class="col-md-6"><a href="index.php" class="btn text-dark border">Back</a></div>
+                <div class="col-md-6"><input type="submit" value="Submit" name="submit" class="btn btn-primary text-white"></div>
+               <div class="col-md-6"><a href="index.php" class="border btn btn-primary text-white">Back</a></div>
             </div>
          </form>
       </div>

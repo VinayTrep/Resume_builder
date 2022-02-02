@@ -13,12 +13,10 @@ if (empty($_SESSION['u_name'])) {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="Description" content="Enter your description here" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-      <link rel="stylesheet" href="../dashboard/assets/sidebar.css">
       <script src="//cdn.ckeditor.com/4.17.1/basic/ckeditor.js"></script>
-      <title>Work Expreance</title>
+      <title>Work Experience</title>
       <style>
          #showdiv {
             display: none;
@@ -84,8 +82,8 @@ if (empty($_SESSION['u_name'])) {
             ?>
          </div>
          <div class="row">
-            <div class="col-md-6 text-right"><button onclick="show()" class="btn btn-warning">Add Experiance</button type="b"></div>
-            <div class="col-md-6 text-right"><a href="education.php" class="btn btn-success px-4">next</a></div>
+            <div class="col-md-6 text-right"><button onclick="show()" class="btn btn-warning">Add Experiance</button></div>
+            <div class="col-md-6 text-center"><a href="education.php" class="btn btn-success px-4">next</a></div>
          </div>
          <!-- form to accept new experience  -->
          <div class="container-fluid" id="showdiv">
@@ -93,7 +91,7 @@ if (empty($_SESSION['u_name'])) {
             <p class="text-muted">List your work experience, from the most recent to the oldest.</p>
             <form class="col-md-8" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                <!-- <?php echo $_SERVER['PHP_SELF']; ?> -->
-               <div class="row">
+               <div class="">
                   <div class="form-group col">
                      <label for="employer">Employer</label>
                      <input type="text" class="form-control" id="employer" name="u_employer">

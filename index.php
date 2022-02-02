@@ -1,7 +1,3 @@
-<?php 
-$link = $_SERVER['REQUEST_URI'];
-if($link =='/resume/')
-{?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +8,7 @@ if($link =='/resume/')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
-<title>Title</title>
+<title>RESUME BUILDER</title>
 <style>
     .page{
         background-color: #2C5364;
@@ -108,8 +104,3 @@ if($link =='/resume/')
 </div>
 </body>
 </html>
-<?php
-}elseif($link == "/resume/*"){
-   echo "hi";
-}
-?>

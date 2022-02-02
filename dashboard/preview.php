@@ -78,13 +78,13 @@ if (empty($_SESSION['u_id'])) {
                   <div class="col-3 text-center p-0 m-0">
                      <label for="radio3">
                         <img src="../images/main1.jpg" style="cursor: pointer;" width="100%;">
-                        <input id="radio3" type="radio" name="css_name" value="css3.css">
+                        <input id="radio3" type="radio" name="css_name" value="css4.css">
                      </label>
                      </div>
                      <div class="col-3 text-center p-0 m-0">
                         <label for="radio4">
                            <img src="../images/work2.png" style="cursor: pointer;" width="100%;">
-                           <input id="radio4" type="radio" name="css_name" value="css4.css">
+                           <input id="radio4" type="radio" name="css_name" value="css3.css">
                         </label>
                      </div>
                      

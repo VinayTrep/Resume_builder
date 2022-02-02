@@ -16,8 +16,9 @@ if (isset($_POST['signup'])) {
                 $con->exec($sql2);
                 $msg = "Your Account is Succesfully Created";
                 $last_id = $con->lastInsertId();
-                $sql3="INSERT INTO skills_and_language (u_id) VALUES ($last_id)";
+                $sql3 = "INSERT INTO skills_and_language (u_id) VALUES ($last_id)";
                 $con->exec($sql3);
+                header('LOCATION:sign_in.php');
             } catch (PDOException $e) {
                 $err = "Error" . $e->getMessage();
             }
@@ -81,7 +82,7 @@ if (isset($_POST['signup'])) {
                             <input type="email" class="form-control" placeholder="Your email " name="u_email" value="<?php if (isset($_POST['u_email'])) echo $_POST['u_email']; ?>" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Your password" name="u_password" value="<?php if (isset($_POST['u_password'])) echo $_POST['u_password']; ?>" required>
+                            <input type="password" class="form-control" placeholder="Your password (min 8 digits)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  name="u_password" value="<?php if (isset($_POST['u_password'])) echo $_POST['u_password']; ?>" required>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password" value="<?php if (isset($_POST['confirm_password'])) echo $_POST['confirm_password']; ?>" required>

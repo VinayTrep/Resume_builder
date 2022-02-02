@@ -44,7 +44,6 @@ include('../includes/connect.php');
    <?php
    if(isset($_POST['submit'])){
       $skill=$_POST['skill'];
-      echo $skill;
       try{
          $skills = $con->prepare("UPDATE skills_and_language SET skill_name='$skill' WHERE $u_id=u_id");   
           $skills->execute();
@@ -81,12 +80,12 @@ include('../includes/connect.php');
             <label for="skills"><b></b></label>
             <input type="text" class="w-50 border border-dark form-control" id="language" name="skill" placeholder="eg:- Html,css,java script">
          </div>
-         <div class="row mt-6">
-            <div class="col-2 text-center">
-               <input class="text-white border rounded bg-primary p-2 m-2" type="submit" name="submit" value="submit">
+         <div class="row mt-6 justify-content-center align-items-center">
+            <div class="col-2">
+               <input class="btn btn-primary" type="submit" name="submit" value="submit">
             </div>
-            <div class="col-7 text-center">
-               <a href="language.php" class="text-white border rounded bg-primary p-2 m-2">Next</a>
+            <div class="col-7">
+               <a href="language.php" class="btn btn-primary">Next</a>
             </div>
          </div>
       </form>

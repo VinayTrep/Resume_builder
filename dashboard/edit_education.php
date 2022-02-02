@@ -17,7 +17,7 @@ if (empty($_SESSION['u_name'])) {
         <meta name="Description" content="Enter your description here" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <title>Education</title>
+        <title>EDIT Education</title>
     </head>
 
     <body>
@@ -135,7 +135,7 @@ if (empty($_SESSION['u_name'])) {
                     $row_pu = $result2->fetch(PDO::FETCH_ASSOC);
                     ?>
                     <!-- PUC education  -->
-                    <h3 class="pt-3">PUC Education</h3>
+                    <h3 class="pt-3">Edit PUC Education</h3>
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
@@ -191,7 +191,7 @@ if (empty($_SESSION['u_name'])) {
                     <!-- Degree college education  -->
                     <div class="container">
                         <form>
-                            <h3 class="pt-3">Under Graduation</h3>
+                            <h3 class="pt-3">Edit Under Graduation</h3>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">

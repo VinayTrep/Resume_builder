@@ -24,6 +24,7 @@
            background-color: #0F2027;
          }
        </style>
+       <title>PERSONAL INFO</title>
      </head>
 
      <body>
@@ -124,6 +125,7 @@
             <textarea name="user_discription"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+          <a href="work_experiance.php" class="btn btn-primary">Next</a>
         </form>
       </div>
 

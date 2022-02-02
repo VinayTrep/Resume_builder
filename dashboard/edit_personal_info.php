@@ -19,6 +19,7 @@ if (empty($_SESSION['u_name'])) {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
             <script src="//cdn.ckeditor.com/4.17.1/basic/ckeditor.js"></script>
+            <title>EDIT PERSONAL INFO</title>
             <style>
                 .text-blue {
                     background-color: #0F2027;
