@@ -56,6 +56,11 @@ include('../includes/connect.php');
    <?php
    include('../dashboard/includes/sidebar.php');
    ?>
+   <?php 
+   $skills1="SELECT * FROM skills_and_language WHERE u_id=$u_id";
+   $result2=$con->query($skills1);
+   $row1=$result2->fetch(PDO::FETCH_ASSOC);
+   ?>
    <div class="main">
    <?php
               if (isset($msg)) {
@@ -78,7 +83,7 @@ include('../includes/connect.php');
       <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
          <div class="form-group align-items-center">
             <label for="skills"><b></b></label>
-            <input type="text" class="w-50 border border-dark form-control" id="language" name="skill" placeholder="eg:- Html,css,java script">
+            <input type="text" class="w-50 border border-dark form-control" id="language" name="skill" placeholder="eg:- Html,css,java script" value="<?php echo $row1['skill_name']; ?>">
          </div>
          <div class="row mt-6 justify-content-center align-items-center">
             <div class="col-2">

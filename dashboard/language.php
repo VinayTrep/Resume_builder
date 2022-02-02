@@ -68,6 +68,12 @@ if(empty($_SESSION['u_name'])){
       echo"<span class='alert alert-danger d-block text-center'>".$err."</span>";
    }
    ?>
+   <!-- fetching the data from the skills and language -->
+   <?php 
+   $lang1="SELECT * FROM skills_and_language WHERE u_id=$u_id";
+   $result=$con->query($lang1);
+   $row=$result->fetch(PDO::FETCH_ASSOC);
+   ?>
    <div class="main">
       <div class="my-4 text-right">
 
@@ -78,10 +84,11 @@ if(empty($_SESSION['u_name'])){
       </div>
       <h1>Language</h1>
       <p>highlight 6-8 of your top language</p>
+      <p>use comma while writing your skills</p>
       <form action="" method="POST">
          <div class="form-group align-items-center">
             <label><b></b></label>
-            <input type="text" class="w-50 border border-dark form-control" id="language" name="language">
+            <input type="text" class="w-50 border border-dark form-control" id="language" name="language" placeholder="eg:- kannada,english,hindi" value="<?php echo $row['language_name'];?>">
          </div>
          <div class="row mt-6">
             <div class="col-2 text-center">
