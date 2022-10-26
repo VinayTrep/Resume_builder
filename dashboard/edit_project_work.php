@@ -20,7 +20,7 @@ if (empty($_SESSION['u_name'])) {
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <script src="//cdn.ckeditor.com/4.17.1/basic/ckeditor.js"></script>
-      <title>Project Work</title>
+      <title> EDIT Project Work</title>
    </head>
 
    <body>
@@ -50,7 +50,7 @@ if (empty($_SESSION['u_name'])) {
                <div class="col-md-6 text-center">
                </div>
                <div class="col-md-6 text-right">
-                  <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
+                  <span class="text-blue py-3 px-4 rounded text-white"><a href="../index.php" class="text-white">RESUME BUILDER</a></span>
                   <a href="logout.php" class="text-blue px-4 py-3 text-white rounded">
                      Logout &nbsp; <i class="fas fa-sign-out-alt"></i>
                   </a>
@@ -78,7 +78,9 @@ if (empty($_SESSION['u_name'])) {
                   <label for="">Project discription</label>
                   <textarea name="u_project_description"><?php echo $row['u_project_description']; ?></textarea>
                </div>
+               <a href="project_work.php" class="btn btn-success px-4">Back</a>
                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+               
             </form>
          </div>
       </div>

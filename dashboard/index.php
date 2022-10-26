@@ -75,7 +75,7 @@
               ?>
             </div>
             <div class="col-md-6 text-right">
-              <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
+              <span class="text-blue py-3 px-4 rounded text-white"><a href="../index.php" class="text-white">RESUME BUILDER</a></span>
               <a href="logout.php" class="text-blue px-4 py-3 text-white rounded">
                 Logout &nbsp; <i class="fas fa-sign-out-alt"></i>
               </a>
@@ -89,7 +89,7 @@
           <div class="row">
             <div class="form-group col">
               <label for="firstname">First Name</label>
-              <input type="text" class="form-control" id="firstname" name="firstname" required>
+              <input type="text" pattern="^[a-zA-Z][A-Za-z\\s]+$" class="form-control" id="firstname" name="firstname" required>
             </div>
             <div class="form-group col">
               <label for="lastname">Last Name</label>
@@ -117,7 +117,7 @@
             </div>
             <div class="form-group col-6">
               <label for="mobile_number">Phone no</label>
-              <input type="text" name="mobile_number" id="mobile_number" class="form-control" size="10" required>
+              <input type="tel" name="mobile_number" id="mobile_number" class="form-control" size="10" required>
             </div>
           </div>
           <div class="py-4">

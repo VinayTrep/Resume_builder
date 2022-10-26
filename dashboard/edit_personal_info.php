@@ -72,7 +72,7 @@ if (empty($_SESSION['u_name'])) {
                             ?>
                         </div>
                         <div class="col-md-6 text-right">
-                            <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
+                            <span class="text-blue py-3 px-4 rounded text-white"><a href="../index.php" class="text-white">RESUME BUILDER</a></span>
                             <a href="logout.php" class="text-blue px-4 py-3 text-white rounded">
                                 Logout &nbsp; <i class="fas fa-sign-out-alt"></i>
                             </a>
@@ -92,7 +92,7 @@ if (empty($_SESSION['u_name'])) {
                     <div class="row">
                         <div class="form-group col">
                             <label for="firstname">First Name</label>
-                            <input type="text" class="form-control" id="firstname" name="firstname" value="<?php print $row['first_name'];?>" required>
+                            <input type="text" pattern="^[a-zA-Z][A-Za-z\\s]+$" class="form-control" id="firstname" name="firstname" value="<?php print $row['first_name'];?>" placeholder="eg: vinay" required>
                         </div>
                         <div class="form-group col">
                             <label for="lastname">Last Name</label>

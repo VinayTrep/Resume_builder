@@ -42,7 +42,7 @@ $id = isset($_GET['id'])? $_GET['id']: '';
    ?>
    <div class="main">
       <div class="my-4 text-right">
-         <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
+         <span class="text-blue py-3 px-4 rounded text-white"><a href="../index.php" class="text-white">RESUME BUILDER</a></span>
          <a href="logout.php" class="text-blue px-4 py-3 text-white rounded">
             Logout &nbsp; <i class="fas fa-sign-out-alt"></i>
          </a>
@@ -103,7 +103,7 @@ $id = isset($_GET['id'])? $_GET['id']: '';
             </div>
             <div class="row">
                 <div class="col-md-6"><input type="submit" value="Submit" name="submit" class="btn btn-primary text-white"></div>
-               <div class="col-md-6"><a href="index.php" class="border btn btn-primary text-white">Back</a></div>
+               <div class="col-md-6"><a href="work_experiance.php" class="border btn btn-primary text-white">Back</a></div>
             </div>
          </form>
       </div>

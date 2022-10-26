@@ -79,7 +79,7 @@ if (empty($_SESSION['u_name'])) {
                         ?>
                     </div>
                     <div class="col-md-6 text-right">
-                        <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
+                        <span class="text-blue py-3 px-4 rounded"><a href="../index.php" class="text-white">RESUME BUILDER</a></span>
                         <a href="logout.php" class="text-blue px-4 py-3 text-white rounded">
                             Logout &nbsp; <i class="fas fa-sign-out-alt"></i>
                         </a>
@@ -224,8 +224,11 @@ if (empty($_SESSION['u_name'])) {
                                 <label>Year of passing</label>
                                 <input type="date" class="form-control" name="u_ug_yop" value="<?php print $row_ug['u_ug_yop']; ?>">
                             </div>
+
+                            <a href="work_experiance.php" class="btn btn-success px-4">Back</a>
+
                             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-                            <a href="skills.php" class="btn btn-primary">Next</a>
+                            <a href="skills.php" class="btn btn-success">Next</a>
                         </form>
                     </div>
             </div>

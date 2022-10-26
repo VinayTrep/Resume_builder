@@ -1,27 +1,21 @@
 <?php
 session_start();
-include('./includes/connect.php');
+include('../includes/connect.php');
 ?>
 <?php
     if (isset($_POST['submit'])) {
       $u_email = $_POST['u_email'];
       $u_pass = $_POST['u_password'];
-      //sql to check if the user exist
-      $sql = "SELECT * FROM user_login_details WHERE u_email='$u_email' && u_password='$u_pass'";
-      $result = $con->query($sql);
-      $row = $result->fetch(PDO::FETCH_ASSOC);
-      if ($u_pass == $row['u_password']) {
-        if ($row['u_email'] == $u_email) {
+      if ($u_email == "admin@gmail.com") {
+        if ($u_pass == "password") {
           $suc="login successfull";
-          $_SESSION['u_name']=$row['u_name'];
-          $_SESSION['u_id']=$row['id'];
-          $_SESSION['is_active']='TRUE';
-          header('location:dashboard/preview.php');
+          $_SESSION['u_name']='admin';
+          header('location:home.php');
         } else {
-          $err= "email id doesn't exist";
+          $err= "password doesn't match";
         }
       } else {
-        $err= "password doesn't match";
+        $err= "email id doesn't exist";
       }
     }
     ?>
@@ -68,7 +62,7 @@ include('./includes/connect.php');
   <div class="container mt-3">
     <div class="row">
       <div class="col-md-6 mx-auto">
-        <h1 class="bg-0F2027 text-white text-center p-3 rounded "><a href="../resume/index.php" class="text-white">BUILD YOUR RESUME</a></h1>
+        <h1 class="bg-0F2027 text-white text-center p-3 rounded ">BUILD YOUR RESUME</h1>
         <?php
         if (!empty($suc)) {
           echo "<div class='alert alert-success text-center'>".$suc."</div>";
@@ -77,7 +71,7 @@ include('./includes/connect.php');
           echo "<div class='alert alert-danger text-center'>".$err."</div>";
         }
          ?>
-          <h2 class="text-center  mt-5 font-xl">SIGN IN</h2>
+          <h2 class="text-center  mt-5 font-xl">ADMIN SIGN IN</h2>
         <h5 class="text-center mt-1">Log in to your account</h5>
         <div class="form">
           <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -87,10 +81,8 @@ include('./includes/connect.php');
             <div class="form-group mt-3">
               <input type="password" class="form-control" placeholder="Enter password" name="u_password" value="<?php if (isset($_POST['u_password'])) echo $_POST['u_password']; ?>" required>
             </div>
-            <button name="submit" type="submit" class="btn d-block bg-success w-50 mx-auto text-white mt-4">Sign in</button>
+            <button name="submit" type="submit" class="btn d-block text-white bg-success w-50 mx-auto mt-4">Sign in</button>
           </form>
-          <h6 class="text-center mt-4"><a href="reset.php"><span>I forgot my password</span></a></h6>
-          <div class="mt-3 text-center f-4 c-warning">Don't have an account? <a href="sign_up.php">Sign Up</a></div>
         </div>
       </div>
     </div>

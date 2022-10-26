@@ -47,13 +47,14 @@ if (empty($_SESSION['u_name'])) {
       ?>
       <div class="main">
          <div class="my-4 text-right">
-            <span class="text-blue py-3 px-4 rounded text-white">RESUME BUILDER</span>
+            <span class="text-blue py-3 px-4 rounded text-white">
+               <a href="../index.php" class="text-white">RESUME BUILDER</a></span>
             <a href="logout.php" class="text-blue px-4 py-3 text-white rounded">
                Logout &nbsp; <i class="fas fa-sign-out-alt"></i>
             </a>
          </div>
          <?php
-         $msg = isset($_GET['msg'])?$_GET['msg']: '';
+         $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
          if (isset($msg) && !empty($msg)) {
             echo "<span class='alert alert-success text-center d-block'>" . $msg . "</span>";
          }
@@ -82,8 +83,10 @@ if (empty($_SESSION['u_name'])) {
             ?>
          </div>
          <div class="row">
-            <div class="col-md-6 text-right"><button onclick="show()" class="btn btn-warning">Add Experiance</button></div>
-            <div class="col-md-6 text-center"><a href="education.php" class="btn btn-success px-4">next</a></div>
+            <div class="col-md-4 text-center"><a href="index.php" class="btn btn-success px-4">Back</a></div>
+
+            <div class="col-md-4 text-center"><button onclick="show()" class="btn btn-warning">Add Experiance</button></div>
+            <div class="col-md-4 text-center"><a href="education.php" class="btn btn-success px-4">next</a></div>
          </div>
          <!-- form to accept new experience  -->
          <div class="container-fluid" id="showdiv">

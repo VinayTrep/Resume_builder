@@ -2,6 +2,7 @@
 session_start();
 include('../includes/connect.php');
 $u_id = $_SESSION['u_id'];
+$u_name= $_SESSION['u_name'];
 if (empty($_SESSION['u_id'])) {
    header('location:../sign_in.php');
 } else {
@@ -19,17 +20,6 @@ if (empty($_SESSION['u_id'])) {
     <link rel="stylesheet" href="assets/css/style.css">
     <title>link
     </title>
-    <style>
-        .mt-5 {
-            margin-top: 190px;
-            margin-left: 100px;
-        }
-
-        .mt-7 {
-            margin-top: 190px;
-            margin-left: 100px;
-        }
-    </style>
 </head>
 
 <body>
@@ -48,7 +38,8 @@ if (empty($_SESSION['u_id'])) {
         <a href="preview.php" class="btn btn-primary">Prevoius Page</a>
 
         <!-- The button used to copy the text -->
-        <button onclick="myFunction()" class="btn btn-primary">Copy text</button>
+        <button onclick="myFunction()" class="btn btn-primary">Copy link</button>
+        <a href="n.php?n=<?php echo $u_name; ?>" class="btn btn-primary"> Download PDF</a>
         <a href="logout.php" class="btn btn-primary">Back to HOME</a>
     </div>
     <script>

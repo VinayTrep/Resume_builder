@@ -7,12 +7,13 @@ if (isset($_POST['signup'])) {
     $u_email = $_POST['u_email'];
     $u_password = $_POST['u_password'];
     $confirm_password = $_POST['confirm_password'];
+    $user_link = "localhost/resume/".$u_name;
     $sql1 = "SELECT u_name FROM user_login_details WHERE u_name='$u_name'";
     $result = $con->query($sql1);
     if ($result->rowCount() == 0) {
         if ($u_password == $confirm_password) {
             try {
-                $sql2 = "INSERT INTO user_login_details (u_name,u_email,u_password) VALUES('$u_name','$u_email','$u_password')";
+                $sql2 = "INSERT INTO user_login_details (u_name,u_email,u_password,user_link) VALUES('$u_name','$u_email','$u_password','$user_link')";
                 $con->exec($sql2);
                 $msg = "Your Account is Succesfully Created";
                 $last_id = $con->lastInsertId();
@@ -61,7 +62,7 @@ if (isset($_POST['signup'])) {
     <div class="container mt-3">
         <div class="row">
             <div class="col-md-6 mx-auto">
-                <h1 class="p-3 rounded bg-0F2027 text-white text-center">BUILD YOUR RESUME</h1>
+                <h1 class="p-3 rounded bg-0F2027 text-white text-center"><a href="../resume/index.php" class="text-white">BUILD YOUR RESUME</a></h1>
                 <div class="form">
                     <?php
                     if (!empty($msg)) {

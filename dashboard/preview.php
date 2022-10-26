@@ -63,40 +63,41 @@ if (empty($_SESSION['u_id'])) {
          <div class="container-fluid ">
             <form action="" method="POST">
                <div class="row">
-               <div class="col-3 text-center p-0 m-0">
-                        <label for="radio1">
-                           <img src="../images/work3.png" style="cursor: pointer;" width="100%;">
-                           <input id="radio1" type="radio" name="css_name" value="css1.css">
-                        </label>
-                     </div>
-                     <div class="col-3 text-center m-0 p-0">
-                        <label for="radio2">
-                           <img src="../images/work4.png" style="cursor: pointer;" width="100%;">
-                           <input id="radio2" type="radio" name="css_name" value="css2.css">
-                        </label>
-                     </div>
+                  <div class="col-3 text-center p-0 m-0">
+                     <label for="radio1">
+                        <img src="../images/work3.png" style="cursor: pointer;" width="100%;">
+                        <input id="radio1" type="radio" name="css_name" value="css1.css">
+                     </label>
+                  </div>
+                  <div class="col-3 text-center m-0 p-0">
+                     <label for="radio2">
+                        <img src="../images/work4.png" style="cursor: pointer;" width="100%;">
+                        <input id="radio2" type="radio" name="css_name" value="css2.css">
+                     </label>
+                  </div>
                   <div class="col-3 text-center p-0 m-0">
                      <label for="radio3">
                         <img src="../images/main1.jpg" style="cursor: pointer;" width="100%;">
                         <input id="radio3" type="radio" name="css_name" value="css4.css">
                      </label>
-                     </div>
-                     <div class="col-3 text-center p-0 m-0">
-                        <label for="radio4">
-                           <img src="../images/work2.png" style="cursor: pointer;" width="100%;">
-                           <input id="radio4" type="radio" name="css_name" value="css3.css">
-                        </label>
-                     </div>
-                     
-                     
+                  </div>
+                  <div class="col-3 text-center p-0 m-0">
+                     <label for="radio4">
+                        <img src="../images/work2.png" style="cursor: pointer;" width="100%;">
+                        <input id="radio4" type="radio" name="css_name" value="css3.css">
+                     </label>
+                  </div>
+
+                  <a href="project_work.php" class="text-white border rounded bg-success p-2 m-2">Back</a>
+
                   <input type="submit" class="text-white border rounded bg-primary p-2 m-2" name="submit">
             </form>
-            <a href="link.php" class="text-white border rounded bg-primary p-2 m-2" >Next</a>
+            <a href="index.php" class="text-white border rounded bg-success p-2 m-2">Next</a>
          </div>
-         </div>
-         <?php
-         include('../dashboard/includes/endsidebar.php');
-         ?>
+      </div>
+      <?php
+      include('../dashboard/includes/endsidebar.php');
+      ?>
    </body>
 
    </html>
